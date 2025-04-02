@@ -35,11 +35,11 @@ def recorrer_rondas(rounds):
         # Incrementa el contador de MVP del jugador
         # Y de paso lo anuncia en la misma ronda
         players_de_cada_ronda[player_MVP]['mvps'] += 1
-        print(f"¡Felicidades '{player_MVP}' por salir MVP en esta ronda!\n")
+        print(f"¡Felicidades '{player_MVP}' por hacer '{max_score_ronda}' puntos y salir MVP en esta ronda!\n")
 
         # Hacemos el ranking de la ronda
         ranking_actual = sorted(players_de_cada_ronda.items(), key=lambda x: x[1]['points'], reverse=True)
-    
+
         # Imprimimos el ranking de la ronda
         for player, data in ranking_actual:
             print(f"{player}: {data['kills']} kills, {data['assists']} assists, {data['deaths']} muertes, {data['points']} puntos, {data['mvps']} MVPs")
